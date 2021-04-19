@@ -1,0 +1,308 @@
+@import url("https://fonts.googleapis.com/css?family=Barlow:400,700,900|Lato:300,400,700&display=swap");
+.btn {
+  background: transparent;
+  border: 1px solid #765eb3;
+  padding: 20px 50px;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 5px;
+  transition: 0.2s ease;
+}
+.btn:hover {
+  background-color: #765eb3;
+  font-size: 1.7rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  line-height: 1.5;
+  font-size: 16px;
+  color: #fff;
+  line-height: 2rem;
+  letter-spacing: 2px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Barlow", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  font-weight: 300;
+  line-height: 3rem;
+}
+
+/***menu***/
+aside {
+  width: 30%;
+  height: 100vh;
+  position: fixed;
+  float: left;
+}
+aside .menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-direction: column;
+  height: 100%;
+  padding: 70px 50px;
+  background-color: #312450;
+}
+aside .menu .logo {
+  margin: 0 auto;
+}
+aside .menu ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-direction: column;
+  padding: 30px;
+  line-height: 4rem;
+}
+aside .menu ul li {
+  position: relative;
+  padding: 20px;
+}
+aside .menu ul li:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 70px;
+  border: 1px solid #5e42a6;
+  display: inline-block;
+  width: 550px;
+  margin: 0 auto;
+  height: 0;
+}
+aside .menu .social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding-right: 50px;
+}
+aside .menu .social i {
+  font-size: 3rem;
+  margin-left: 20px;
+}
+
+/***main***/
+main {
+  scroll-behavior: smooth;
+  float: right;
+  width: 70%;
+}
+main header {
+  background-image: linear-gradient(rgba(94, 66, 166, 0.8), rgba(94, 66, 166, 0.8)), url(img/circle.png);
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+}
+main header div {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 40vh 100px 50px 100px;
+}
+main header div h1 {
+  font-size: 6rem;
+}
+main header div p {
+  padding: 100px 0;
+  font-size: 1.5rem;
+  line-height: 3rem;
+}
+
+/***about***/
+#about {
+  height: 100vh;
+}
+#about article {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+#about article img {
+  display: block;
+  width: 33.33vh;
+}
+#about article h3 {
+  font-size: 2.5rem;
+  padding-bottom: 50px;
+}
+#about article p {
+  font-size: 1.3rem;
+  line-height: 2.5rem;
+  padding-bottom: 30px;
+}
+#about article:nth-child(1) {
+  background-color: #5052b5;
+}
+#about article:nth-child(2) {
+  background-color: #4c4eac;
+}
+#about article:nth-child(3) {
+  background-color: #484aa3;
+}
+#about article div:first-child {
+  flex: 0 0 30%;
+}
+#about article div:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  flex: 0 0 70%;
+  padding: 50px 0 50px 50px;
+}
+@media (max-width: 767px) {
+  #about article div:last-child {
+    padding: 30px;
+  }
+}
+
+/***whatwedo***/
+#whatwedo {
+  background-color: #b74e91;
+  padding: 50px 100px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#whatwedo article:nth-child(1) {
+  padding: 50px 0;
+}
+#whatwedo article:nth-child(1) h2 {
+  font-size: 3rem;
+  padding-bottom: 30px;
+}
+#whatwedo article:nth-child(1) p {
+  font-size: 1.3rem;
+}
+#whatwedo article:nth-child(2) {
+  background-color: #be77a4;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+#whatwedo article:nth-child(2) div {
+  flex: 0 0 50%;
+  padding: 70px 50px;
+  border: 1px solid rgba(211, 211, 211, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+}
+#whatwedo article:nth-child(2) div i {
+  flex: 0 0 30%;
+  font-size: 5rem;
+  text-align: center;
+}
+#whatwedo article:nth-child(2) div div {
+  flex: 0 0 70%;
+  padding: 0;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+}
+#whatwedo article:nth-child(2) div div h4 {
+  font-size: 2rem;
+  padding-bottom: 20px;
+}
+#whatwedo article:nth-child(2) div div p {
+  font-size: 1.3rem;
+}
+
+/***contact***/
+#contact {
+  background-color: #5e42a6;
+  padding: 50px 100px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#contact article:nth-child(1) h2 {
+  font-size: 3rem;
+  padding-bottom: 30px;
+}
+#contact article:nth-child(1) p {
+  font-size: 1.3rem;
+}
+#contact article:nth-child(2) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+#contact article:nth-child(2) form {
+  flex: 0 0 55%;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  border-right: 1px solid rgba(211, 211, 211, 0.7);
+  color: #fff;
+  margin-bottom: 20px;
+}
+#contact article:nth-child(2) form input[type=text] {
+  flex: 0 0 45%;
+  padding: 10px;
+  margin: 10px 10px 10px 0;
+  background-color: #765eb3;
+  border-radius: 10px;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+}
+#contact article:nth-child(2) form textarea {
+  flex: 0 0 90%;
+  margin-bottom: 20px;
+  margin-left: -10px;
+  background-color: #765eb3;
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  color: #fff;
+  font-size: 1.2rem;
+}
+#contact article:nth-child(2) div {
+  flex: 0 0 45%;
+  padding: 20px;
+}/*# sourceMappingURL=style.css.map */

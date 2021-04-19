@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow:400,700,900|Lato:300,400,700&display=swap');
+
+$primaryViolet: #5e42a6;
+$navColor: #312450;
+$firstBg: #5052b5;
+$secondBg: #4c4eac;
+$thirdBg: #484aa3;
+$fourthBg: #b74e91;
+$fourthBglight: #be77a4;
+$fifthBg: #5e42a6;
+$footerBg: #493382;
+$white: #fff;
+$border: #765eb3;
+$lightGray: rgba(211, 211, 211, .7);
+$borderLightGray: rgba(211, 211, 211, .3);
+$transition: 0.2s ease;
+
+@mixin flex($justify, $align, $direction) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+
+.btn {
+    background: transparent;
+    border: 1px solid $border;
+    padding: 20px 50px;
+    border-radius: 50px;
+    color: $white;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 5px;
+    transition: $transition;
+
+    &:hover {
+        background-color: $border;
+        font-size: 1.7rem;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.5;
+    font-size: 16px;
+    color: $white;
+    line-height: 2rem;
+    letter-spacing: 2px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Barlow', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: $white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+ul {
+    list-style: none;
+}
+
+p {
+    font-weight: 300;
+    line-height: 3rem;
+}
+
+
+/***menu***/
+aside {
+    width: 30%;
+    height: 100vh;
+    position: fixed;
+    float: left;
+
+    .menu {
+        @include flex(space-between, flex-end, column);
+        //width: 700px;
+        height: 100%;
+        padding: 70px 50px;
+
+        background-color: $navColor;
+
+        .logo {
+            margin: 0 auto;
+        }
+
+        ul {
+            @include flex(space-between, flex-end, column);
+            padding: 30px;
+            line-height: 4rem;
+
+            li {
+                position: relative;
+                padding: 20px;
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    right: 0;
+                    top: 70px;
+                    border: 1px solid $primaryViolet;
+                    display: inline-block;
+                    width: 550px;
+                    margin: 0 auto;
+                    height: 0;
+                }
+            }
+        }
+
+        .social {
+            @include flex(space-between, center, row);
+            padding-right: 50px;
+
+            i {
+                font-size: 3rem;
+                margin-left: 20px;
+            }
+        }
+    }
+}
+
+/***main***/
+main {
+
+    scroll-behavior: smooth;
+    float: right;
+    width: 70%;
+
+    header {
+        background-image: linear-gradient(rgba($primaryViolet, .8), rgba($primaryViolet, .8)), url(img/circle.png);
+        background-position: center;
+        background-size: cover;
+        min-height: 100vh;
+
+        div {
+            @include flex(center, flex-start, column);
+            padding: 40vh 100px 50px 100px;
+
+            h1 {
+                font-size: 6rem;
+            }
+
+            p {
+                padding: 100px 0;
+                font-size: 1.5rem;
+                line-height: 3rem;
+            }
+        }
+
+    }
+}
+
+/***about***/
+// services
+#about {
+    height: 100vh;
+
+    article {
+        @include flex(space-between, center, row);
+
+        img {
+            display: block;
+            width: 33.33vh;
+        }
+
+        h3 {
+            font-size: 2.5rem;
+            padding-bottom: 50px;
+        }
+
+        p {
+            font-size: 1.3rem;
+            line-height: 2.5rem;
+            padding-bottom: 30px;
+        }
+
+        &:nth-child(1) {
+            background-color: $firstBg;
+        }
+
+        &:nth-child(2) {
+            background-color: $secondBg;
+        }
+
+        &:nth-child(3) {
+            background-color: $thirdBg;
+        }
+
+        div {
+            &:first-child {
+                flex: 0 0 30%;
+            }
+
+            &:last-child {
+                @include flex(center, flex-start, column);
+                flex: 0 0 70%;
+                padding: 50px 0 50px 50px;
+
+                @media (max-width: 767px) {
+                    padding: 30px;
+                }
+            }
+        }
+    }
+}
+
+/***whatwedo***/
+#whatwedo {
+    background-color: $fourthBg;
+    padding: 50px 100px;
+    height: 100vh;
+    @include flex(center, center, column);
+
+    article {
+        &:nth-child(1) {
+            padding: 50px 0;
+
+            h2 {
+                font-size: 3rem;
+                padding-bottom: 30px;
+            }
+
+            p {
+                font-size: 1.3rem;
+            }
+        }
+
+        &:nth-child(2) {
+            background-color: $fourthBglight;
+
+            @include flex(space-between, flex-start, row);
+            flex-wrap: wrap;
+
+            div {
+                flex: 0 0 50%;
+                padding: 70px 50px;
+                border: 1px solid $lightGray;
+                @include flex(center, flex-start, row);
+
+
+                i {
+                    flex: 0 0 30%;
+                    font-size: 5rem;
+                    text-align: center;
+
+                }
+
+                div {
+                    flex: 0 0 70%;
+                    padding: 0;
+                    border: none;
+                    @include flex(space-between, flex-start, column);
+
+
+                    h4 {
+                        font-size: 2rem;
+                        padding-bottom: 20px;
+
+                    }
+
+                    p {
+                        font-size: 1.3rem;
+                    }
+                }
+
+
+
+            }
+        }
+
+    }
+}
+
+/***contact***/
+#contact {
+    background-color: $fifthBg;
+    padding: 50px 100px;
+    height: 100vh;
+    @include flex(center, center, column);
+
+    article {
+        &:nth-child(1) {
+
+            h2 {
+                font-size: 3rem;
+                padding-bottom: 30px;
+            }
+
+            p {
+                font-size: 1.3rem;
+            }
+        }
+
+        &:nth-child(2) {
+            @include flex(space-between, center, row);
+
+            form {
+                flex: 0 0 55%;
+                padding-top: 20px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                border-right: 1px solid $lightGray;
+                color: $white;
+                margin-bottom: 20px;
+
+
+                input[type="text"] {
+                    flex: 0 0 45%;
+                    padding: 10px;
+                    margin: 10px 10px 10px 0;
+                    background-color: $border;
+                    border-radius: 10px;
+                    border: none;
+                    color: $white;
+                    font-size: 1.2rem;
+
+                }
+
+                textarea {
+                    flex: 0 0 90%;
+                    margin-bottom: 20px;
+                    margin-left: -10px;
+                    background-color: $border;
+                    border-radius: 10px;
+                    border: none;
+                    padding: 10px;
+                    color: $white;
+                    font-size: 1.2rem;
+
+                }
+
+            }
+
+            div {
+                flex: 0 0 45%;
+                padding: 20px;
+            }
+        }
+    }
+}
