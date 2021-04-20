@@ -12,6 +12,11 @@
   letter-spacing: 5px;
   transition: 0.2s ease;
 }
+@media (max-width: 768px) {
+  .btn {
+    margin: 30px 10px;
+  }
+}
 .btn:hover {
   background-color: #765eb3;
   font-size: 1.5rem;
@@ -61,12 +66,23 @@ p {
   line-height: 3rem;
 }
 
+img {
+  /*  display: block;
+  width: 100%; */
+}
+
 /***menu***/
 aside {
   width: 30%;
   height: 100vh;
   position: fixed;
   float: left;
+}
+@media (max-width: 768px) {
+  aside {
+    position: relative;
+    width: 100%;
+  }
 }
 aside .menu {
   display: flex;
@@ -120,6 +136,13 @@ main {
   scroll-behavior: smooth;
   float: right;
   width: 70%;
+  height: 100vh;
+}
+@media (max-width: 768px) {
+  main {
+    position: relative;
+    width: 100%;
+  }
 }
 main header {
   background-image: linear-gradient(rgba(94, 66, 166, 0.8), rgba(94, 66, 166, 0.8)), url(img/circle.png);
@@ -134,18 +157,38 @@ main header div {
   flex-direction: column;
   padding: 40vh 100px 50px 100px;
 }
+@media (max-width: 768px) {
+  main header div {
+    padding: 30vh 100px 50px 100px;
+  }
+}
 main header div h1 {
   font-size: 6rem;
+}
+@media (max-width: 768px) {
+  main header div h1 {
+    font-size: 4rem;
+  }
 }
 main header div p {
   padding: 100px 0;
   font-size: 1.5rem;
   line-height: 3rem;
 }
+@media (max-width: 768px) {
+  main header div p {
+    font-size: 1.3rem;
+  }
+}
 
 /***about***/
 #about {
   height: 100vh;
+}
+@media (max-width: 768px) {
+  #about {
+    height: 100%;
+  }
 }
 #about article {
   display: flex;
@@ -153,18 +196,69 @@ main header div p {
   align-items: center;
   flex-direction: row;
 }
-#about article img {
+@media (max-width: 768px) {
+  #about article {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+}
+@media (max-width: 768px) {
+  #about article div {
+    width: 100%;
+  }
+}
+#about article div img {
   display: block;
   width: 33.33vh;
 }
-#about article h3 {
+@media (max-width: 768px) {
+  #about article div img {
+    width: 100%;
+  }
+}
+#about article div h3 {
   font-size: 2.5rem;
   padding-bottom: 50px;
 }
-#about article p {
+@media (max-width: 768px) {
+  #about article div h3 {
+    font-size: 2rem;
+    padding-left: 50px;
+  }
+}
+#about article div p {
   font-size: 1.3rem;
   line-height: 2.5rem;
   padding-bottom: 30px;
+}
+@media (max-width: 768px) {
+  #about article div p {
+    font-size: 1.3rem;
+    padding: 0 50px;
+  }
+}
+#about article div:first-child {
+  flex: 0 0 30%;
+}
+@media (max-width: 768px) {
+  #about article div:first-child {
+    flex: 0 0 100%;
+  }
+}
+#about article div:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  flex: 0 0 70%;
+  padding: 50px 0 50px auto;
+  flex-wrap: wrap;
+}
+@media (max-width: 767px) {
+  #about article div:last-child {
+    flex: 0 0 100%;
+    padding: 30px;
+  }
 }
 #about article:nth-child(1) {
   background-color: #5052b5;
@@ -175,32 +269,22 @@ main header div p {
 #about article:nth-child(3) {
   background-color: #484aa3;
 }
-#about article div:first-child {
-  flex: 0 0 30%;
-}
-#about article div:last-child {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-direction: column;
-  flex: 0 0 70%;
-  padding: 50px 0 50px 50px;
-}
-@media (max-width: 767px) {
-  #about article div:last-child {
-    padding: 30px;
-  }
-}
 
 /***whatwedo***/
 #whatwedo {
   background-color: #b74e91;
-  padding: 50px 100px;
+  padding: 40px 100px;
   height: 100vh;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
+}
+@media (max-width: 768px) {
+  #whatwedo {
+    height: 100%;
+    flex-wrap: wrap;
+  }
 }
 #whatwedo article:nth-child(1) {
   padding: 40px 0;
@@ -228,11 +312,27 @@ main header div p {
   justify-content: center;
   align-items: flex-start;
   flex-direction: row;
+  flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+  #whatwedo article:nth-child(2) div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex: 0 0 100%;
+  }
 }
 #whatwedo article:nth-child(2) div i {
   flex: 0 0 30%;
   font-size: 5rem;
   text-align: center;
+}
+@media (max-width: 768px) {
+  #whatwedo article:nth-child(2) div i {
+    flex: 0 0 100%;
+    padding-bottom: 50px;
+  }
 }
 #whatwedo article:nth-child(2) div div {
   flex: 0 0 70%;
@@ -243,12 +343,27 @@ main header div p {
   align-items: flex-start;
   flex-direction: column;
 }
+@media (max-width: 768px) {
+  #whatwedo article:nth-child(2) div div {
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 50px;
+  }
+}
 #whatwedo article:nth-child(2) div div h4 {
   font-size: 2rem;
   padding-bottom: 20px;
 }
 #whatwedo article:nth-child(2) div div p {
   font-size: 1.3rem;
+}
+@media (max-width: 768px) {
+  #whatwedo article:nth-child(2) div div p {
+    text-align: center;
+    padding-left: 50px;
+  }
 }
 #whatwedo article:nth-child(3) {
   padding: 20px 0;
@@ -264,17 +379,33 @@ main header div p {
   align-items: center;
   flex-direction: column;
 }
+@media (max-width: 768px) {
+  #contact {
+    height: 100%;
+  }
+}
 #contact article:nth-child(1) {
+  padding: 40px 0;
   margin-bottom: 50px;
 }
 #contact article:nth-child(1) h2 {
   font-size: 3rem;
   padding-bottom: 30px;
 }
+@media (max-width: 768px) {
+  #contact article:nth-child(1) h2 {
+    font-size: 2.7rem;
+  }
+}
 #contact article:nth-child(1) p {
   font-size: 1.5rem;
   color: lightGray;
   font-weight: 700;
+}
+@media (max-width: 768px) {
+  #contact article:nth-child(1) p {
+    font-size: 1.3rem;
+  }
 }
 #contact article:nth-child(2) {
   display: flex;
@@ -283,8 +414,13 @@ main header div p {
   flex-direction: row;
   margin: 0;
 }
+@media (max-width: 768px) {
+  #contact article:nth-child(2) {
+    flex-direction: column;
+  }
+}
 #contact article:nth-child(2) form {
-  flex: 0 0 70%;
+  flex: 0 0 60%;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -292,6 +428,13 @@ main header div p {
   flex-wrap: wrap;
   border-right: 1px solid rgba(211, 211, 211, 0.7);
   margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+  #contact article:nth-child(2) form {
+    flex: 0 0 100%;
+    display: inline-flex;
+    border-right: none;
+  }
 }
 #contact article:nth-child(2) form input[type=text] {
   flex: 0 0 44%;
@@ -302,8 +445,15 @@ main header div p {
   border: none;
   font-size: 1.2rem;
 }
+@media (max-width: 768px) {
+  #contact article:nth-child(2) form input[type=text] {
+    flex: 0 0 100%;
+    padding: 20px;
+    margin: 10px 0;
+  }
+}
 #contact article:nth-child(2) form input:nth-child(2) {
-  margin-right: 100px;
+  margin-right: 90px;
 }
 #contact article:nth-child(2) form textarea {
   flex: 0 0 91%;
@@ -314,10 +464,22 @@ main header div p {
   padding: 20px;
   font-size: 1.2rem;
 }
+@media (max-width: 768px) {
+  #contact article:nth-child(2) form textarea {
+    flex: 0 0 100%;
+    width: none;
+    margin-top: 10px;
+  }
+}
 #contact article:nth-child(2) div {
-  flex: 0 0 45%;
+  flex: 0 0 40%;
   padding: 20px;
   margin-top: 20px;
+}
+@media (max-width: 768px) {
+  #contact article:nth-child(2) div {
+    flex: 0 0 100%;
+  }
 }
 #contact article:nth-child(2) div h4 {
   font-size: 2rem;
@@ -329,6 +491,7 @@ main header div p {
   color: rgba(211, 211, 211, 0.7);
   font-weight: 600;
 }
+
 /***footer***/
 footer {
   background-color: rgba(94, 66, 166, 0.9);
