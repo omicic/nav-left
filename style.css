@@ -6,6 +6,7 @@
   border-radius: 50px;
   color: #fff;
   font-size: 1.3rem;
+  margin: 30px 0;
   text-transform: uppercase;
   font-weight: 400;
   letter-spacing: 5px;
@@ -13,7 +14,7 @@
 }
 .btn:hover {
   background-color: #765eb3;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
 }
 
 * {
@@ -45,6 +46,10 @@ a {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 4px;
+  transition: 0.2s ease;
+}
+a:hover {
+  color: rgba(211, 211, 211, 0.7);
 }
 
 ul {
@@ -193,15 +198,15 @@ main header div p {
   padding: 50px 100px;
   height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   flex-direction: column;
 }
 #whatwedo article:nth-child(1) {
-  padding: 50px 0;
+  padding: 40px 0;
 }
 #whatwedo article:nth-child(1) h2 {
-  font-size: 3rem;
+  font-size: 2.7rem;
   padding-bottom: 30px;
 }
 #whatwedo article:nth-child(1) p {
@@ -211,13 +216,13 @@ main header div p {
   background-color: #be77a4;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
 }
 #whatwedo article:nth-child(2) div {
   flex: 0 0 50%;
-  padding: 70px 50px;
+  padding: 70px 50px 70px 0;
   border: 1px solid rgba(211, 211, 211, 0.7);
   display: flex;
   justify-content: center;
@@ -245,64 +250,92 @@ main header div p {
 #whatwedo article:nth-child(2) div div p {
   font-size: 1.3rem;
 }
+#whatwedo article:nth-child(3) {
+  padding: 20px 0;
+}
 
 /***contact***/
 #contact {
   background-color: #5e42a6;
-  padding: 50px 100px;
+  padding: 40px 100px;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
+#contact article:nth-child(1) {
+  margin-bottom: 50px;
+}
 #contact article:nth-child(1) h2 {
   font-size: 3rem;
   padding-bottom: 30px;
 }
 #contact article:nth-child(1) p {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
+  color: lightGray;
+  font-weight: 700;
 }
 #contact article:nth-child(2) {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   flex-direction: row;
+  margin: 0;
 }
 #contact article:nth-child(2) form {
-  flex: 0 0 55%;
-  padding-top: 20px;
+  flex: 0 0 70%;
   display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
   border-right: 1px solid rgba(211, 211, 211, 0.7);
-  color: #fff;
   margin-bottom: 20px;
 }
 #contact article:nth-child(2) form input[type=text] {
-  flex: 0 0 45%;
-  padding: 10px;
-  margin: 10px 10px 10px 0;
+  flex: 0 0 44%;
+  padding: 20px 30px;
+  margin: 30px 0;
   background-color: #765eb3;
   border-radius: 10px;
   border: none;
-  color: #fff;
   font-size: 1.2rem;
 }
+#contact article:nth-child(2) form input:nth-child(2) {
+  margin-right: 100px;
+}
 #contact article:nth-child(2) form textarea {
-  flex: 0 0 90%;
+  flex: 0 0 91%;
   margin-bottom: 20px;
-  margin-left: -10px;
   background-color: #765eb3;
   border-radius: 10px;
   border: none;
-  padding: 10px;
-  color: #fff;
+  padding: 20px;
   font-size: 1.2rem;
 }
 #contact article:nth-child(2) div {
   flex: 0 0 45%;
   padding: 20px;
+  margin-top: 20px;
+}
+#contact article:nth-child(2) div h4 {
+  font-size: 2rem;
+  padding: 20px;
+}
+#contact article:nth-child(2) div p {
+  font-size: 1.3rem;
+  padding-left: 30px;
+  color: rgba(211, 211, 211, 0.7);
+  font-weight: 600;
+}
+/***footer***/
+footer {
+  background-color: rgba(94, 66, 166, 0.9);
+  padding: 50px 0;
+  text-align: center;
+}
+footer p {
+  font-size: 1.2rem;
+  font-weight: 500;
 }/*# sourceMappingURL=style.css.map */
