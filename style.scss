@@ -62,8 +62,13 @@ body {
     line-height: 2rem;
     letter-spacing: 2px;
 
+    .fa-home {
+        display: none;
+    }
+
     @media(max-width: 768px) {
         .fa-home {
+            display: block;
             color: $fourthBglight;
             font-size: 3rem;
             position: fixed;
