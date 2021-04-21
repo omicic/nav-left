@@ -36,6 +36,15 @@ body {
   line-height: 2rem;
   letter-spacing: 2px;
 }
+@media (max-width: 768px) {
+  body .fa-home {
+    color: #be77a4;
+    font-size: 3rem;
+    position: fixed;
+    top: 30px;
+    right: 20px;
+  }
+}
 
 h1,
 h2,
@@ -64,11 +73,6 @@ ul {
 p {
   font-weight: 300;
   line-height: 3rem;
-}
-
-img {
-  /*  display: block;
-  width: 100%; */
 }
 
 /***menu***/
@@ -131,26 +135,20 @@ aside .menu .social i {
   margin-left: 20px;
 }
 
-/***main***/
-main {
-  scroll-behavior: smooth;
-  float: right;
-  width: 70%;
-  height: 100vh;
-}
-@media (max-width: 768px) {
-  main {
-    position: relative;
-    width: 100%;
-  }
-}
-main header {
+header {
   background-image: linear-gradient(rgba(94, 66, 166, 0.8), rgba(94, 66, 166, 0.8)), url(img/circle.png);
   background-position: center;
   background-size: cover;
   min-height: 100vh;
+  float: right;
+  width: 70%;
 }
-main header div {
+@media (max-width: 768px) {
+  header {
+    width: 100%;
+  }
+}
+header div {
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -158,94 +156,109 @@ main header div {
   padding: 40vh 100px 50px 100px;
 }
 @media (max-width: 768px) {
-  main header div {
+  header div {
     padding: 30vh 100px 50px 100px;
   }
 }
-main header div h1 {
+header div h1 {
   font-size: 6rem;
 }
 @media (max-width: 768px) {
-  main header div h1 {
+  header div h1 {
     font-size: 4rem;
   }
 }
-main header div p {
+header div p {
   padding: 100px 0;
   font-size: 1.5rem;
   line-height: 3rem;
 }
 @media (max-width: 768px) {
-  main header div p {
+  header div p {
     font-size: 1.3rem;
   }
 }
 
-/***about***/
-#about {
+/***main***/
+main {
+  scroll-behavior: smooth;
+  float: right;
+  width: 70%;
+  height: 100vh;
+  /***about***/
+  /***whatwedo***/
+  /***contact***/
+}
+@media (max-width: 768px) {
+  main {
+    width: 100%;
+  }
+}
+main #about {
   height: 100vh;
 }
 @media (max-width: 768px) {
-  #about {
+  main #about {
     height: 100%;
   }
 }
-#about article {
+main #about article {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
 }
 @media (max-width: 768px) {
-  #about article {
+  main #about article {
     flex-wrap: wrap;
     flex-direction: column;
   }
 }
 @media (max-width: 768px) {
-  #about article div {
+  main #about article div {
     width: 100%;
   }
 }
-#about article div img {
+main #about article div img {
   display: block;
   width: 33.33vh;
 }
 @media (max-width: 768px) {
-  #about article div img {
+  main #about article div img {
     width: 100%;
   }
 }
-#about article div h3 {
+main #about article div h3 {
   font-size: 2.5rem;
   padding-bottom: 50px;
 }
 @media (max-width: 768px) {
-  #about article div h3 {
+  main #about article div h3 {
     font-size: 2rem;
     padding-left: 50px;
+    padding-top: 20px;
   }
 }
-#about article div p {
+main #about article div p {
   font-size: 1.3rem;
   line-height: 2.5rem;
   padding-bottom: 30px;
 }
 @media (max-width: 768px) {
-  #about article div p {
+  main #about article div p {
     font-size: 1.3rem;
     padding: 0 50px;
   }
 }
-#about article div:first-child {
+main #about article div:first-child {
   flex: 0 0 30%;
 }
 @media (max-width: 768px) {
-  #about article div:first-child {
+  main #about article div:first-child {
     flex: 0 0 100%;
   }
 }
-#about article div:last-child {
+main #about article div:last-child {
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -255,23 +268,21 @@ main header div p {
   flex-wrap: wrap;
 }
 @media (max-width: 767px) {
-  #about article div:last-child {
+  main #about article div:last-child {
     flex: 0 0 100%;
     padding: 30px;
   }
 }
-#about article:nth-child(1) {
+main #about article:nth-child(1) {
   background-color: #5052b5;
 }
-#about article:nth-child(2) {
+main #about article:nth-child(2) {
   background-color: #4c4eac;
 }
-#about article:nth-child(3) {
+main #about article:nth-child(3) {
   background-color: #484aa3;
 }
-
-/***whatwedo***/
-#whatwedo {
+main #whatwedo {
   background-color: #b74e91;
   padding: 40px 100px;
   height: 100vh;
@@ -281,22 +292,24 @@ main header div p {
   flex-direction: column;
 }
 @media (max-width: 768px) {
-  #whatwedo {
+  main #whatwedo {
     height: 100%;
     flex-wrap: wrap;
   }
 }
-#whatwedo article:nth-child(1) {
-  padding: 40px 0;
+main #whatwedo article:nth-child(1) {
+  flex: 0 0 20%;
+  padding: 40px 0 20px 0;
 }
-#whatwedo article:nth-child(1) h2 {
+main #whatwedo article:nth-child(1) h2 {
   font-size: 2.7rem;
   padding-bottom: 30px;
 }
-#whatwedo article:nth-child(1) p {
+main #whatwedo article:nth-child(1) p {
   font-size: 1.3rem;
 }
-#whatwedo article:nth-child(2) {
+main #whatwedo article:nth-child(2) {
+  flex: 0 0 50%;
   background-color: #be77a4;
   display: flex;
   justify-content: space-between;
@@ -304,7 +317,7 @@ main header div p {
   flex-direction: row;
   flex-wrap: wrap;
 }
-#whatwedo article:nth-child(2) div {
+main #whatwedo article:nth-child(2) div {
   flex: 0 0 50%;
   padding: 70px 50px 70px 0;
   border: 1px solid rgba(211, 211, 211, 0.7);
@@ -315,7 +328,7 @@ main header div p {
   flex-wrap: wrap;
 }
 @media (max-width: 768px) {
-  #whatwedo article:nth-child(2) div {
+  main #whatwedo article:nth-child(2) div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -323,18 +336,18 @@ main header div p {
     flex: 0 0 100%;
   }
 }
-#whatwedo article:nth-child(2) div i {
+main #whatwedo article:nth-child(2) div i {
   flex: 0 0 30%;
   font-size: 5rem;
   text-align: center;
 }
 @media (max-width: 768px) {
-  #whatwedo article:nth-child(2) div i {
+  main #whatwedo article:nth-child(2) div i {
     flex: 0 0 100%;
     padding-bottom: 50px;
   }
 }
-#whatwedo article:nth-child(2) div div {
+main #whatwedo article:nth-child(2) div div {
   flex: 0 0 70%;
   padding: 0;
   border: none;
@@ -344,7 +357,7 @@ main header div p {
   flex-direction: column;
 }
 @media (max-width: 768px) {
-  #whatwedo article:nth-child(2) div div {
+  main #whatwedo article:nth-child(2) div div {
     flex: 0 0 100%;
     flex-wrap: wrap;
     align-items: center;
@@ -352,25 +365,23 @@ main header div p {
     padding-bottom: 50px;
   }
 }
-#whatwedo article:nth-child(2) div div h4 {
+main #whatwedo article:nth-child(2) div div h4 {
   font-size: 2rem;
   padding-bottom: 20px;
 }
-#whatwedo article:nth-child(2) div div p {
+main #whatwedo article:nth-child(2) div div p {
   font-size: 1.3rem;
 }
 @media (max-width: 768px) {
-  #whatwedo article:nth-child(2) div div p {
+  main #whatwedo article:nth-child(2) div div p {
     text-align: center;
     padding-left: 50px;
   }
 }
-#whatwedo article:nth-child(3) {
-  padding: 20px 0;
+main #whatwedo article:nth-child(2):nth-child(3) {
+  flex: 0 0 20%;
 }
-
-/***contact***/
-#contact {
+main #contact {
   background-color: #5e42a6;
   padding: 40px 100px;
   height: 100vh;
@@ -380,34 +391,39 @@ main header div p {
   flex-direction: column;
 }
 @media (max-width: 768px) {
-  #contact {
+  main #contact {
     height: 100%;
   }
 }
-#contact article:nth-child(1) {
+main #contact article:nth-child(1) {
   padding: 40px 0;
   margin-bottom: 50px;
 }
-#contact article:nth-child(1) h2 {
+@media (max-width: 768px) {
+  main #contact article:nth-child(1) {
+    margin-bottom: 0px;
+  }
+}
+main #contact article:nth-child(1) h2 {
   font-size: 3rem;
   padding-bottom: 30px;
 }
 @media (max-width: 768px) {
-  #contact article:nth-child(1) h2 {
+  main #contact article:nth-child(1) h2 {
     font-size: 2.7rem;
   }
 }
-#contact article:nth-child(1) p {
+main #contact article:nth-child(1) p {
   font-size: 1.5rem;
   color: lightGray;
   font-weight: 700;
 }
 @media (max-width: 768px) {
-  #contact article:nth-child(1) p {
+  main #contact article:nth-child(1) p {
     font-size: 1.3rem;
   }
 }
-#contact article:nth-child(2) {
+main #contact article:nth-child(2) {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -415,11 +431,11 @@ main header div p {
   margin: 0;
 }
 @media (max-width: 768px) {
-  #contact article:nth-child(2) {
+  main #contact article:nth-child(2) {
     flex-direction: column;
   }
 }
-#contact article:nth-child(2) form {
+main #contact article:nth-child(2) form {
   flex: 0 0 60%;
   display: flex;
   justify-content: space-between;
@@ -430,13 +446,14 @@ main header div p {
   margin-bottom: 20px;
 }
 @media (max-width: 768px) {
-  #contact article:nth-child(2) form {
+  main #contact article:nth-child(2) form {
     flex: 0 0 100%;
     display: inline-flex;
     border-right: none;
+    margin-bottom: 0px;
   }
 }
-#contact article:nth-child(2) form input[type=text] {
+main #contact article:nth-child(2) form input[type=text] {
   flex: 0 0 44%;
   padding: 20px 30px;
   margin: 30px 0;
@@ -446,16 +463,16 @@ main header div p {
   font-size: 1.2rem;
 }
 @media (max-width: 768px) {
-  #contact article:nth-child(2) form input[type=text] {
+  main #contact article:nth-child(2) form input[type=text] {
     flex: 0 0 100%;
     padding: 20px;
     margin: 10px 0;
   }
 }
-#contact article:nth-child(2) form input:nth-child(2) {
+main #contact article:nth-child(2) form input:nth-child(2) {
   margin-right: 90px;
 }
-#contact article:nth-child(2) form textarea {
+main #contact article:nth-child(2) form textarea {
   flex: 0 0 91%;
   margin-bottom: 20px;
   background-color: #765eb3;
@@ -465,27 +482,27 @@ main header div p {
   font-size: 1.2rem;
 }
 @media (max-width: 768px) {
-  #contact article:nth-child(2) form textarea {
+  main #contact article:nth-child(2) form textarea {
     flex: 0 0 100%;
     width: none;
     margin-top: 10px;
   }
 }
-#contact article:nth-child(2) div {
+main #contact article:nth-child(2) div {
   flex: 0 0 40%;
   padding: 20px;
   margin-top: 20px;
 }
 @media (max-width: 768px) {
-  #contact article:nth-child(2) div {
+  main #contact article:nth-child(2) div {
     flex: 0 0 100%;
   }
 }
-#contact article:nth-child(2) div h4 {
+main #contact article:nth-child(2) div h4 {
   font-size: 2rem;
   padding: 20px;
 }
-#contact article:nth-child(2) div p {
+main #contact article:nth-child(2) div p {
   font-size: 1.3rem;
   padding-left: 30px;
   color: rgba(211, 211, 211, 0.7);
@@ -493,12 +510,12 @@ main header div p {
 }
 
 /***footer***/
-footer {
+main footer {
   background-color: rgba(94, 66, 166, 0.9);
-  padding: 50px 0;
+  padding: 20px 0;
   text-align: center;
 }
-footer p {
+main footer p {
   font-size: 1.2rem;
   font-weight: 500;
 }/*# sourceMappingURL=style.css.map */

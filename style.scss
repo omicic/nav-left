@@ -61,6 +61,16 @@ body {
     color: $white;
     line-height: 2rem;
     letter-spacing: 2px;
+
+    @media(max-width: 768px) {
+        .fa-home {
+            color: $fourthBglight;
+            font-size: 3rem;
+            position: fixed;
+            top: 30px;
+            right: 20px;
+        }
+    }
 }
 
 h1,
@@ -91,11 +101,6 @@ ul {
 p {
     font-weight: 300;
     line-height: 3rem;
-}
-
-img {
-    /*  display: block;
-    width: 100%; */
 }
 
 
@@ -159,6 +164,47 @@ aside {
     }
 }
 
+header {
+    background-image: linear-gradient(rgba($primaryViolet, .8), rgba($primaryViolet, .8)), url(img/circle.png);
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    float: right;
+    width: 70%;
+
+    @media(max-width: 768px) {
+        width: 100%;
+    }
+
+    div {
+        @include flex(center, flex-start, column);
+        padding: 40vh 100px 50px 100px;
+
+        @media(max-width: 768px) {
+            padding: 30vh 100px 50px 100px;
+        }
+
+        h1 {
+            font-size: 6rem;
+
+            @media(max-width: 768px) {
+                font-size: 4rem;
+            }
+        }
+
+        p {
+            padding: 100px 0;
+            font-size: 1.5rem;
+            line-height: 3rem;
+
+            @media(max-width: 768px) {
+                font-size: 1.3rem;
+            }
+        }
+    }
+
+}
+
 /***main***/
 main {
 
@@ -168,45 +214,8 @@ main {
     height: 100vh;
 
     @media(max-width: 768px) {
-        position: relative;
         width: 100%;
     }
-
-    header {
-        background-image: linear-gradient(rgba($primaryViolet, .8), rgba($primaryViolet, .8)), url(img/circle.png);
-        background-position: center;
-        background-size: cover;
-        min-height: 100vh;
-
-        div {
-            @include flex(center, flex-start, column);
-            padding: 40vh 100px 50px 100px;
-
-            @media(max-width: 768px) {
-                padding: 30vh 100px 50px 100px;
-            }
-
-            h1 {
-                font-size: 6rem;
-
-                @media(max-width: 768px) {
-                    font-size: 4rem;
-                }
-            }
-
-            p {
-                padding: 100px 0;
-                font-size: 1.5rem;
-                line-height: 3rem;
-
-                @media(max-width: 768px) {
-                    font-size: 1.3rem;
-                }
-            }
-        }
-
-    }
-
 
     /***about***/
     #about {
@@ -246,6 +255,7 @@ main {
                     @media(max-width: 768px) {
                         font-size: 2rem;
                         padding-left: 50px;
+                        padding-top: 20px;
                     }
                 }
 
@@ -312,8 +322,8 @@ main {
         article {
             &:nth-child(1) {
 
-                flex: 0 0 30%;
-                padding: 40px 0;
+                flex: 0 0 20%;
+                padding: 40px 0 20px 0;
 
                 h2 {
                     font-size: 2.7rem;
@@ -327,7 +337,7 @@ main {
             }
 
             &:nth-child(2) {
-                flex: 0 0 30%;
+                flex: 0 0 50%;
                 background-color: $fourthBglight;
                 @include flex(space-between, center, row);
                 flex-wrap: wrap;
@@ -389,7 +399,7 @@ main {
                 }
 
                 &:nth-child(3) {
-                    flex: 0 0 30%;
+                    flex: 0 0 20%;
                     //padding: 50px 0;
                 }
             }
@@ -405,15 +415,21 @@ main {
         background-color: $fifthBg;
         padding: 40px 100px;
         height: 100vh;
+
         @include flex(center, center, column);
 
-
-        @media(max-width: 768px) {}
+        @media(max-width: 768px) {
+            height: 100%;
+        }
 
         article {
             &:nth-child(1) {
                 padding: 40px 0;
                 margin-bottom: 50px;
+
+                @media(max-width: 768px) {
+                    margin-bottom: 0px;
+                }
 
                 h2 {
                     font-size: 3rem;
@@ -456,6 +472,7 @@ main {
                         flex: 0 0 100%;
                         display: inline-flex;
                         border-right: none;
+                        margin-bottom: 0px;
                     }
 
 
@@ -522,20 +539,21 @@ main {
                     }
                 }
             }
-
         }
     }
+}
 
-    /***footer***/
+/***footer***/
+main {
     footer {
-        background-color: rgba($fifthBg, 0.9);
-        padding: 50px 0;
+        background-color: rgba($fifthBg, .9);
+        padding: 20px 0;
         text-align: center;
+
 
         p {
             font-size: 1.2rem;
             font-weight: 500;
         }
-
     }
 }
